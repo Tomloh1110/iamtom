@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Real-time Translation Chat">
+    <title>Real-time Translation Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>  
+<body>
+    <div class="app-container">
+        <!-- 左侧历史记录栏 -->
+        <aside class="history-sidebar">
+            <div class="history-header">
+                <div class="logo-container">
+                    <img src="logo.png" alt="Translation Chat Logo" class="app-logo">
+                    <h2>Translation History</h2>
+                </div>
+                <button id="newChatButton" class="new-chat-button">
+                    <span>+</span> New Chat
+                </button>
+            </div>
+            <!-- 添加主题输入框 -->
+            <div class="chat-title-input-container" id="chatTitleContainer" style="display: none;">
+                <input type="text" 
+                    id="chatTitleInput" 
+                    class="chat-title-input" 
+                    placeholder="Enter chat title..."
+                    maxlength="30"
+                >
+                <div class="title-buttons">
+                    <button id="saveTitleButton" class="title-button save">✓</button>
+                    <button id="cancelTitleButton" class="title-button cancel">✕</button>
+                </div>
+            </div>
+            <div class="history-list" id="historyList">
+                <!-- 历史记录将在这里动态添加 -->
+            </div>
+        </aside>
+
+        <!-- 主聊天区域 -->
+        <main class="main-content">
+            <section class="chat-section">
+                <h1>Real-time Translation Chat</h1>
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <div class="chat-header-content">
+                            <div class="current-chat-title">
+                                <span id="currentChatTitle" class="chat-title-text">New Translation</span>
+                                <button id="editCurrentTitle" class="edit-current-title">✎</button>
+                            </div>
+                            <div class="language-selector">
+                                <label for="targetLanguage">Translate to:</label>
+                                <select id="targetLanguage">
+                                    <option value="en">English</option>
+                                    <option value="zh">Chinese (简体中文)</option>
+                                    <option value="ja">Japanese (日本語)</option>
+                                    <option value="ko">Korean (한국어)</option>
+                                    <option value="es">Spanish (Español)</option>
+                                    <option value="fr">French (Français)</option>
+                                    <option value="de">German (Deutsch)</option>
+                                    <option value="ru">Russian (Русский)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="messageDisplay" class="message-display">
+                        <!-- Messages will be displayed here -->
+                    </div>
+                    
+                    <div class="chat-input-area">
+                        <textarea 
+                            id="messageInput" 
+                            class="message-input" 
+                            placeholder="Type your message here..."
+                            rows="3"
+                        ></textarea>
+                        <button id="sendButton" class="send-button">
+                            Send
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
