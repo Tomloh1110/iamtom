@@ -462,31 +462,13 @@ h1 {
 }
 
 .main-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-.main-header h1 {
-    margin: 0;
+    display: none;
 }
 
 .app-logo {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-    background-color: #5f9ea0;
-    padding: 8px;
-    border-radius: 4px;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    display: none;
 }
 
-/* 删除旧的logo相关样式 */
 .logo-container {
     display: none;
 } 
